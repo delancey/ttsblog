@@ -10,7 +10,11 @@ public class BlogPost {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+
     private String title, author, blogEntry;
+
+    public BlogPost(){}//no argument constructor for JPA
 
     public BlogPost(String title, String author, String blogEntry) {
         this.title = title;

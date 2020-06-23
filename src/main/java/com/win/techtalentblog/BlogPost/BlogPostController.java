@@ -13,20 +13,18 @@ public class BlogPostController {
     private BlogPostRepository blogPostRepository;
 
     @GetMapping
-    public String index(BlogPost blogPost){
+    public String index(BlogPost blogPost) {
         return "blogpost/index";
     }
 
     private BlogPost blogPost;
 
     @PostMapping
-    public String addNewblogPost(BlogPost blogPost, Model model){
+    public String addNewBlogPost(BlogPost blogPost, Model model) {
         blogPostRepository.save(new BlogPost(blogPost.getTitle(), blogPost.getAuthor(), blogPost.getBlogEntry()));
         model.addAttribute("title", blogPost.getTitle());
         model.addAttribute("author", blogPost.getAuthor());
         model.addAttribute("blogEntry", blogPost.getBlogEntry());
-        return "blog/result";
-
+        return "blogpost/result";
     }
-
-}//end of class
+}

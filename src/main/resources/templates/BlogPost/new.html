@@ -9,19 +9,20 @@
 <body>
     <div class="container">
         <div th:replace="/fragments/navbar :: navbar"></div>
-        <div class="row">
-            <p>Use the form below to submit a blog post:</p>
-            <form action="#" th:action="@{/blogposts}" th:object="${blogPost}" method="POST">
+        <div class="row form-begin">
+            <p class = beforeForm>Use the form below to submit a blog post:</p>
+           
+            <form  action="#" th:action="@{/blogposts}" th:object="${blogPost}" method="POST">
               <label for="blogTitle">Title:</label>
-              <input type="text" name="blogTitle" th:field="*{title}" />
-    
+              <input type="text" name="blogTitle" placeholder = "Enter Post Title" th:field="*{title}" />
+                <br />    
               <label for="blogAuthor">Author:</label>
-              <input type="text" name="blogAuthor" th:field="*{author}" />
+              <input type="text" name="blogAuthor"  placeholder= "Enter Author Name" th:field="*{author}" />
     
               <label for="blogEntry">Blog Entry:</label>
-              <input type="text" name="blogEntry" th:field="*{blogEntry}" />
+              <input type="textarea" name="blogEntry" th:field="*{blogEntry}" />
     
-              <button type="submit">Submit Your Blog</button>
+              <button type="submit" >Submit</button>
             </form>
         </div>
     </div>

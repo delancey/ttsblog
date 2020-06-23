@@ -7,16 +7,17 @@
     <div th:replace="/fragments/styling :: head-style"></div>
 </head>
 <body>
-    <div class="container">
+    <div class="container center-container">
         <div th:replace="/fragments/navbar :: navbar"></div>
       <div class="row">
           <div class="col-md">
-        <h1>Welcome to the blog!</h1> 
-        <h3>Check out some posts!</h3>
+        <h1 class = "headline">Welcome to the blog!</h1> 
+        <h3 class = "subhead">Check out some posts!</h3>
+        
     </div>
     </div>
 
-    <div class="row">
+    <div class="row postcards">
         <div th:each="blog:${posts}">
           <div class="col-sm">
             <div class="card">
@@ -35,7 +36,7 @@
       <div class="row">
           <div class="col-xl">
         <a href="/blogposts/new">
-            <button class="btn btn-success">Submit Post</button>
+            <button class="btn btn-success">Add New Post</button>
         </a>
     </div>
       </div>

@@ -1,9 +1,196 @@
+/* global sytles */
+body{
+    background-color: #f0e6d7;
+}
 html{
-    background-color: #eee;
     padding: .6em 1em;
+}
+
 
     h1, h2, h3, h4{
+        font-family: 'Adamina', serif;
         display: block;
+        color: #fb7217;
     }
 
+    h1, h4{
+        font-weight: bold;
+    }
+
+p {
+    font-family: 'Gothic A1', sans-serif;
+    color: #444;
+    size: 40px;
 }
+
+/* navbar styling */
+
+.bg-light{
+    background-color: transparent!important;
+    border-bottom: 1px solid #dd7549;
+    
+}
+.btn-outline-success{
+    border-color: #DD7549;
+    color: #DD7549;
+}
+
+.btn-outline-success:hover{
+    background-color: #c1dbd0;
+    color: #dd7549;
+}
+
+
+
+/* form styling */
+.form-begin{
+    display: block;
+    margin-top: 25px;
+}
+
+
+.beforeForm{
+    color: #DD7549;
+    padding-bottom: 20px;
+}
+
+label[for="blogTitle"], label[for="blogAuthor"] {
+    display: inline-block;
+    margin: 20px 0; 
+    width: 80px;
+    text-transform: uppercase;
+}
+
+
+input[type ="text"]{
+    font-size: 14px;
+    width: 400px;
+    height: 30px;
+    font-family: 'Adamina', serif;
+    font-weight: bold;
+}
+
+label[for ="blogEntry"]{
+    display: block;
+    margin-top: 10px;
+    border: rgba(30,30,30,.5);
+    text-transform: uppercase;
+    
+}
+
+input[name="blogEntry"]{
+    width: 700px;
+    height: 450px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #f6f6f6;
+    color: #444;
+    padding-bottom: 410px;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+button{
+    background-color: #DD7549;
+    color: white;
+    text-transform: uppercase;
+    width: 80px;
+    height: 40px;
+    border-radius: 10%;
+}
+
+button:hover{
+    background-color: #c1dbd0;
+    color: #dd7549;
+
+}
+
+
+/* index styling */
+
+
+.container{
+    margin: 0 auto;
+}
+.headline{
+    margin-top: 30px;
+}
+
+.subhead{
+    padding-bottom: 20px;
+    color: #444;
+}
+
+.postcards{
+    margin-top: 30px;
+}
+
+.card{
+    background-color: #C1DBD0;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+.card:hover{
+    background-color: #dd7549;
+}
+
+.card-body{
+    background-color: #e6e6e6;
+}
+
+
+.card-title {
+    color: #444;
+    font-family: 'Adamina', serif;
+    font-weight: bold;
+}
+
+.btn-success{
+    background-color: #DD7549;
+    color: white;
+    border: none;
+    width: 160px;
+    margin-top: 25px;
+}
+
+.btn-success:hover{
+    background-color: #c1dbd0;
+    color: #dd7549;
+    font-weight: bold;
+    
+    
+ }
+
+
+/* results page */
+.post-submit-spacing{
+    display: block;
+    margin-top: 30px;
+}
+
+.bPost{
+    margin-top: 40px;
+}
+.btn-primary{
+    background-color: #DD7549;
+    color: white;
+}
+
+.btn-primary:hover{
+   background-color: #EBDECB;
+   color: #DD7549;
+   font-weight: bold;
+}
+
+.btn-secondary{
+    width: 190px;
+    background-color: #c1dbd0;
+    color: #dd7549;
+}
+
+.btn-secondary:hover{
+    background-color: #EBDECB;
+    color: #DD7549;
+    font-weight: bold
+ 
+ }

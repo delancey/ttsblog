@@ -7,23 +7,49 @@
     <link rel = "stylesheet" href= "webjars/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Welcome to the blog!</h1>
-    <h3>Check out some posts while you're here.</h3>
+    <div class="container">
+        <div class="row">
+            <h1>Welcome to the blog!</h1>
+            <h3>Check out some posts while you're here.</h3>
 
-    <p>Use the form below to submit a blog post:</p>
+            <div th.each="blog:${posts}">
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" th:text="${blog.title}"></h5>
+                            <p th:text= "${blog.author}"></p>
+                            <p th:text= "${blog.blogEntry}"></p>
+                        </div>
+                        <div class="card-footer"></div>
+                    </div>
+                </div>
+            </div>
 
-    <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
-        <label for="blogTitle">Title:</label>
-        <input type="text" name="blogTitle" th:field="*{title}" />
-  
-        <label for="blogAuthor">Author:</label>
-        <input type="text" name="blogAuthor" th:field="*{author}" />
-  
-        <label for="blogEntry">Blog Entry:</label>
-        <input type="text" name="blogEntry" th:field="*{blogEntry}" />
-  
-        <button type="submit">Submit Your Blog</button>
-      </form>
+        </div>
+            
+        <div class="row">
+            <p>Use the form below to submit a blog post:</p>
+            <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
+                <label for="blogTitle">Title:</label>
+                <input type="text" name="blogTitle" th:field="*{title}" />
+        
+                <label for="blogAuthor">Author:</label>
+                <input type="text" name="blogAuthor" th:field="*{author}" />
+        
+                <label for="blogEntry">Blog Entry:</label>
+                <input type="text" name="blogEntry" th:field="*{blogEntry}" />
+        
+                <button type="submit">Submit Your Blog</button>
+            </form>
+        </div>
+
+
+        </div>
+
+    </div>
+    
+
+    
 
       
       <script src= "webjars/jquery/3.5.1.jquery.min.js"></script>

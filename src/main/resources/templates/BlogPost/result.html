@@ -26,8 +26,12 @@
 				<a href="/">
 					<button class="btn btn-primary"> Home</button>
 				</a>
-				<a href="/blogposts/new">
+				<a href="#" th:href="@{/blogposts/{id}(id=${blogPost.id})}"> 
 					<button class="btn btn-secondary addl-post">Create New Post</button>
+				</a>
+
+				<a href="/blogposts/edit">
+					<button class="btn btn-primary addl-post">Edit</button>
 				</a>
 			</div>
 		</div>

@@ -1,4 +1,4 @@
-/* global sytles */
+/* global styles */
 body{
     background-color: #f0e6d7;
 }
@@ -124,10 +124,18 @@ button:hover{
     margin-top: 30px;
 }
 
+.card-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card{
     background-color: #C1DBD0;
     margin-bottom: 20px;
     width: 300px;
+    display: flex;           /* new */
+  flex-direction: column;
+  flex: 2;
 }
 
 .card:hover{
@@ -136,6 +144,7 @@ button:hover{
 
 .card-body{
     background-color: #e6e6e6;
+    flex: 1;
 }
 
 

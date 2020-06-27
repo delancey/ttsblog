@@ -25,10 +25,35 @@ p {
 
 /* navbar styling */
 
+.navbar-light .navbar-brand{
+    color: #dd7549;
+    font-weight: normal;
+}
+
+.navbar-light .navbar-brand:hover{
+    color: white;   
+    font-weight: normal;
+    padding: 0 3px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:  #dd7549;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #dd7549;
+    background-color: #C1DBD0;
+}
+
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #dd7549;
+}
+
+input[name="search"]{
+    font-family: 'Adamina', serif;
+}
 .bg-light{
     background-color: transparent!important;
-    border-bottom: 1px solid #dd7549;
-    
+    border-bottom: 1px solid #dd7549;    
 }
 .btn-outline-success{
     border-color: #DD7549;
@@ -40,7 +65,18 @@ p {
     color: #dd7549;
 }
 
+.dropdown-menu, .dropdown-toggle {
+    background-color: #f0e6d7;    
+}
 
+.dropdown-item {
+   color: #dd7549;
+}
+
+.dropdown-item:hover {
+    color: #dd7549;
+    background-color: white;
+ }
 
 /* form styling */
 .form-begin{
@@ -74,8 +110,7 @@ label[for ="blogEntry"]{
     display: block;
     margin-top: 10px;
     border: rgba(30,30,30,.5);
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
 }
 
 input[name="blogEntry"]{
@@ -95,13 +130,13 @@ button{
     text-transform: uppercase;
     width: 80px;
     height: 40px;
-    border-radius: 10%;
+    border-radius: 10%; 
+    border: none;   
 }
 
 button:hover{
     background-color: #c1dbd0;
     color: #dd7549;
-
 }
 
 
@@ -111,6 +146,7 @@ button:hover{
 .container{
     margin: 0 auto;
 }
+
 .headline{
     margin-top: 30px;
 }
@@ -127,6 +163,12 @@ button:hover{
 .card-group{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card-footer{
+    display: flex;
+    justify-content: center;    
 }
 
 .card{
@@ -134,19 +176,18 @@ button:hover{
     margin-bottom: 20px;
     width: 300px;
     display: flex;           /* new */
-  flex-direction: column;
-  flex: 2;
+    flex-direction: column;
+    flex: 2;
 }
 
 .card:hover{
-    background-color: #dd7549;
+   border: 1px solid #dd7549;
 }
 
 .card-body{
     background-color: #e6e6e6;
     flex: 1;
 }
-
 
 .card-title {
     color: #444;
@@ -166,8 +207,7 @@ button:hover{
     background-color: #c1dbd0;
     color: #dd7549;
     font-weight: bold;
-    
-    
+    border: none;
  }
 
 
@@ -192,14 +232,44 @@ button:hover{
 }
 
 .btn-secondary{
-    width: 190px;
+    width: 60px;
     background-color: #c1dbd0;
     color: #dd7549;
+    font-size: small;
+    font-weight: bold;
+    border: 1px solid #dd7549;
 }
 
 .btn-secondary:hover{
     background-color: #EBDECB;
     color: #DD7549;
     font-weight: bold
- 
  }
+
+ .btn-danger{
+    width: 80px;
+    background-color: #c1dbd0;
+    color: #dd7549;
+    font-size: small;
+    font-weight: bold;
+    border: 1px solid #dd7549;
+}
+
+ .btn-danger:hover{
+     border: 1px solid #dd7549;
+    background-color: #dd7549;
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+.addl-post{
+    width: 100px;
+    font-weight: bold;
+    font-size: small;
+    border: 1px solid #dd7549; 
+}
+
+.addl-post:hover{
+    border: 1px solid #c1dbd0;
+}
